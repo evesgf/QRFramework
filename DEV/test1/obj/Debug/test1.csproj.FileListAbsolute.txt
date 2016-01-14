@@ -1,6 +1,0 @@
-D:\Codeing\C#\MyFrameWork\test1\bin\Debug\test1.exe.config
-D:\Codeing\C#\MyFrameWork\test1\bin\Debug\test1.exe
-D:\Codeing\C#\MyFrameWork\test1\bin\Debug\test1.pdb
-D:\Codeing\C#\MyFrameWork\test1\obj\Debug\test1.csprojResolveAssemblyReference.cache
-D:\Codeing\C#\MyFrameWork\test1\obj\Debug\test1.exe
-D:\Codeing\C#\MyFrameWork\test1\obj\Debug\test1.pdb

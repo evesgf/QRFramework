@@ -4,14 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using IBLL;
+using Model.Entitys;
 
 namespace BLL
 {
-    public class BaseBLL<T>:IBaseBLL<T> where T:class ,new()
+    public class UsersBLL:BaseBLL<Users>,IUsersBLL
     {
-        public virtual string Hello()
+        public override string Hello()
         {
-            return null;
+            return "Hello from users";
         }
     }
 }

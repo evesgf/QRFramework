@@ -7,7 +7,7 @@ using Model.Entitys;
 
 namespace IBLL
 {
-    //public interface IUserBLL:IBaseBLL<Users>
-    //{
-    //}
+    public interface IUsersBLL:IBaseBLL<Users>
+    {
+    }
 }
