@@ -9,5 +9,7 @@ namespace IBLL
     public interface IBaseBLL<T> where T:class
     {
         string Hello();
+
+        T Get(int id);
     }
 }

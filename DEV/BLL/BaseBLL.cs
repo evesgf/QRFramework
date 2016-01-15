@@ -13,5 +13,10 @@ namespace BLL
         {
             return null;
         }
+
+        public T Get(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
