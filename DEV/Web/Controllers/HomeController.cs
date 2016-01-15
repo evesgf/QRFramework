@@ -11,13 +11,13 @@ namespace Web.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IUsersBLL _iUsersBll;
+        private readonly IUsersBLL<Users> _iUsersBll;
 
         /// <summary>
         /// 构造方法注入依赖接口
         /// </summary>
         /// <param name="iBaseBll"></param>
-        public HomeController(IUsersBLL iUsersBll)
+        public HomeController(IUsersBLL<Users> iUsersBll)
         {
             _iUsersBll = iUsersBll;
         }

@@ -8,7 +8,7 @@ using Model.Entitys;
 
 namespace BLL
 {
-    public class UsersBLL:BaseBLL<Users>,IUsersBLL
+    public class UsersBLL<T> : BaseBLL<T>, IUsersBLL<T> where T : class
     {
         public override string Hello()
         {

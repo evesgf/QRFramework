@@ -7,7 +7,7 @@ using IBLL;
 
 namespace BLL
 {
-    public class BaseBLL<T>:IBaseBLL<T> where T:class ,new()
+    public class BaseBLL<T>:IBaseBLL<T> where T:class
     {
         public virtual string Hello()
         {

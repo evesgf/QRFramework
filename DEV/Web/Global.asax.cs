@@ -28,7 +28,7 @@ namespace Web
             builder.RegisterControllers(Assembly.GetExecutingAssembly());
             builder.RegisterAssemblyTypes(Assembly.GetExecutingAssembly());
 
-            builder.RegisterGeneric(typeof (BaseBLL<>)).As(typeof (IBaseBLL<>)).InstancePerDependency();
+            builder.RegisterGeneric(typeof(UsersBLL<>)).As(typeof(IUsersBLL<>));
 
             var container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));

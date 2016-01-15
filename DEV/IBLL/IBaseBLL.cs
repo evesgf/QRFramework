@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IBLL
 {
-    public interface IBaseBLL<T> where T:class ,new()
+    public interface IBaseBLL<T> where T:class
     {
         string Hello();
     }

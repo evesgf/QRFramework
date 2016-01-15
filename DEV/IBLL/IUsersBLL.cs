@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Model.Entitys;
 
 namespace IBLL
 {
-    public interface IUsersBLL:IBaseBLL<Users>
+    public interface IUsersBLL<T> : IBaseBLL<T> where T : class
     {
     }
 }
