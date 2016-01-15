@@ -8,11 +8,16 @@ using Model.Entitys;
 
 namespace BLL
 {
-    public class UsersBLL<T> : BaseBLL<T>, IUsersBLL<T> where T : class
+    public class UsersBLL : BaseBLL<Users>, IUsersBLL
     {
-        public override string Hello()
+        public string MyHello()
         {
             return "Hello from users";
+        }
+
+        public void UserBLLMethod()
+        {
+            throw new NotImplementedException();
         }
     }
 }

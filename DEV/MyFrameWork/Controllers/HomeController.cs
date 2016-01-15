@@ -4,6 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using IBLL;
 using MyFrameWork.DAL;
 using MyFrameWork.Entitys;
 using MyFrameWork.IDAL;
@@ -15,10 +16,12 @@ namespace MyFrameWork.Controllers
     {
         EFDBContext db = new EFDBContext();
         private readonly IUserInfoDAL _iuserInfoDal;
+        private readonly IUsersBLL _usersBll;
 
-        public HomeController(IUserInfoDAL iuserinfodal)
+        public HomeController(IUserInfoDAL iuserinfodal,IUsersBLL usersBll)
         {
             _iuserInfoDal = iuserinfodal;
+            _usersBll = usersBll;
         }
 
         // GET: Home
