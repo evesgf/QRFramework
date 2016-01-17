@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace IBLL
 {
-    public interface IUsersBLL:IDependency
+    /// <summary>
+    /// 仅用于实现IOC，所有接口必须依赖此接口
+    /// </summary>
+    public interface IDependency
     {
-        string Hello();
     }
 }

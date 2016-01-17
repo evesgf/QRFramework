@@ -128,12 +128,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="BLL\BaseBLL.cs" />
+    <Compile Include="BLL\HelloBLL.cs" />
+    <Compile Include="BLL\UserInfoBLL.cs" />
+    <Compile Include="BLL\UsersBLL.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="DAL\BaseDAL.cs" />
-    <Compile Include="DAL\UserInfoDAL.cs" />
+    <Compile Include="DAL\HelloDAL.cs" />
+    <Compile Include="DAL\UserDAL.cs" />
     <Compile Include="DI\IOCConfig.cs" />
-    <Compile Include="IDAL\IBaseDAL.cs" />
-    <Compile Include="IDAL\IUserInfoDAL.cs" />
+    <Compile Include="IBLL\IBaseBLL.cs" />
+    <Compile Include="IBLL\IDependency.cs" />
+    <Compile Include="IBLL\IHlelloBLL.cs" />
+    <Compile Include="IBLL\IUserInfoBLL.cs" />
+    <Compile Include="IBLL\IUsersBLL.cs" />
+    <Compile Include="IDAL\IHelloDAL.cs" />
+    <Compile Include="IDAL\IUserDAL.cs" />
     <Compile Include="Model\EFDBContext.cs" />
     <Compile Include="Model\UserInfo.cs" />
     <Compile Include="Model\Users.cs" />
@@ -169,12 +178,6 @@
     <EmbeddedResource Include="Migrations\201601100647034_InitialCreate.resx">
       <DependentUpon>201601100647034_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\IBLL\IBLL.csproj">
-      <Project>{58224F1F-FC9C-4AFA-9A44-1D155D09BD74}</Project>
-      <Name>IBLL</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

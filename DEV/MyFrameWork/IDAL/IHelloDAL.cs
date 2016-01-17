@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MyFrameWork.IBLL;
 
-namespace IBLL
+namespace MyFrameWork.IDAL
 {
-    public interface IUsersBLL:IDependency
+    public interface IHelloDAL: IDependency
     {
-        string Hello();
+        string HelloDALstr();
     }
 }

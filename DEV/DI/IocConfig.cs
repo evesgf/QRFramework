@@ -1,23 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 using Autofac;
 using Autofac.Integration.Mvc;
-using MyFrameWork.IBLL;
+using IBLL;
 
-namespace MyFrameWork.DI
+namespace DI
 {
-    public class IOCConfig
+    public static class IocConfig
     {
         public static void RegisterAutofac()
         {
             var builder = new ContainerBuilder();
 
             var baseType = typeof(IDependency);
+
             var assemblys = AppDomain.CurrentDomain.GetAssemblies().ToList();
             var AllServices = assemblys
                 .SelectMany(s => s.GetTypes())
@@ -30,7 +30,6 @@ namespace MyFrameWork.DI
                    .AsImplementedInterfaces().InstancePerLifetimeScope();
 
             DependencyResolver.SetResolver(new AutofacDependencyResolver(builder.Build()));
-
         }
     }
 }

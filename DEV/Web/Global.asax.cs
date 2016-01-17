@@ -10,6 +10,7 @@ using System.Web.Routing;
 using Autofac;
 using Autofac.Integration.Mvc;
 using BLL;
+using DI;
 using IBLL;
 
 namespace Web
@@ -21,20 +22,7 @@ namespace Web
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
 
-            //配置autofac
-            var builder = new ContainerBuilder();
-
-            //注册了当前程序集内所有的controller类
-            builder.RegisterControllers(Assembly.GetExecutingAssembly());
-            builder.RegisterAssemblyTypes(Assembly.GetExecutingAssembly());
-
-//            builder.RegisterGeneric(typeof(UsersBLL<>)).As(typeof(IUsersBLL<>));
-
-            builder.RegisterGeneric(typeof (BaseBLL<>)).As(typeof (IBaseBLL<>)).InstancePerDependency();
-            builder.RegisterType<UsersBLL>().As<IUsersBLL>().InstancePerDependency();
-
-            var container = builder.Build();
-            DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
+            IocConfig.RegisterAutofac();
         }
     }
 }

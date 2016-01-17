@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MyFrameWork.IBLL;
 
-namespace IBLL
+namespace MyFrameWork.IDAL
 {
-    public interface IBaseBLL<T> where T:class
+    public interface IUserDAL:IDependency
     {
-        string Hello();
-
-        T Get(int id);
+        string UserDALstr();
     }
 }

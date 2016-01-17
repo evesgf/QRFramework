@@ -4,24 +4,24 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using IBLL;
 using MyFrameWork.DAL;
 using MyFrameWork.Entitys;
-using MyFrameWork.IDAL;
+using MyFrameWork.IBLL;
 using MyFrameWork.Migrations;
 
 namespace MyFrameWork.Controllers
 {
     public class HomeController : Controller
     {
-        EFDBContext db = new EFDBContext();
-        private readonly IUserInfoDAL _iuserInfoDal;
-        private readonly IUsersBLL _usersBll;
+        private readonly IHlelloBLL _iHlelloBll;
+        private readonly IUsersBLL _iUsersBll;
+        private readonly IUserInfoBLL _iuserInfoBll;
 
-        public HomeController(IUserInfoDAL iuserinfodal,IUsersBLL usersBll)
+        public HomeController(IHlelloBLL iHlelloBll, IUsersBLL iUsersBll, IUserInfoBLL iuserInfoBll)
         {
-            _iuserInfoDal = iuserinfodal;
-            _usersBll = usersBll;
+            _iHlelloBll = iHlelloBll;
+            _iUsersBll = iUsersBll;
+            _iuserInfoBll = iuserInfoBll;
         }
 
         // GET: Home
@@ -47,10 +47,12 @@ namespace MyFrameWork.Controllers
 
             #region 查询list
 
-            var list = _iuserInfoDal.GetListBy(a=>a.Id==1,b=>b.Id).ToList();
+            var a = _iUsersBll.Users();
+            var b = _iHlelloBll.Hello();
+            var c = _iuserInfoBll.Show();
             #endregion
 
-            return View(list);
+            return View();
         }
     }
 }

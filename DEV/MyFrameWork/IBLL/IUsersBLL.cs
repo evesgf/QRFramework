@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IBLL
+namespace MyFrameWork.IBLL
 {
     public interface IUsersBLL:IDependency
     {
-        string Hello();
+        string Users();
     }
 }

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IBLL
+namespace MyFrameWork.IBLL
 {
-    public interface IUsersBLL:IDependency
+    public interface IHlelloBLL:IDependency
     {
         string Hello();
     }

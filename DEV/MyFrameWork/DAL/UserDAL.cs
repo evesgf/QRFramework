@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using IBLL;
+using MyFrameWork.IDAL;
 
-namespace BLL
+namespace MyFrameWork.DAL
 {
-    public class UsersBLL:IUsersBLL
+    public class UserDAL:IUserDAL
     {
-        public string Hello()
+        public string UserDALstr()
         {
-            return "Hello World";
+            return "UserDALstr";
         }
     }
 }

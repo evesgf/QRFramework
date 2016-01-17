@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IBLL
+namespace MyFrameWork.IBLL
 {
-    public interface IUsersBLL:IDependency
+    public interface IBaseBLL<T>:IDependency where T:class
     {
-        string Hello();
+        string  Show();
     }
 }

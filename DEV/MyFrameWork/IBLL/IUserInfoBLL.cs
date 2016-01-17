@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MyFrameWork.DAL;
 
-namespace IBLL
+namespace MyFrameWork.IBLL
 {
-    public interface IUsersBLL:IDependency
+    public partial interface IUserInfoBLL:IBaseBLL<UserInfo>
     {
-        string Hello();
     }
 }
