@@ -41,12 +41,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestBLL.cs" />
     <Compile Include="UsersBLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\IBLL\IBLL.csproj">
       <Project>{58224f1f-fc9c-4afa-9a44-1d155d09bd74}</Project>
       <Name>IBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IDAL\IDAL.csproj">
+      <Project>{11e4d7ec-3575-4be0-8172-e3a4dd407ca6}</Project>
+      <Name>IDAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\Model\Model.csproj">
       <Project>{513f0929-3429-4bde-b7b0-59dbc2891712}</Project>

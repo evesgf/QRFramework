@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using IBLL;
+using IDAL;
 
-namespace BLL
+namespace DAL
 {
-    public class UsersBLL:IUsersBLL
+    public class BaseDAL:IBaseDAL
     {
-        public string Hello()
+        public string GetId()
         {
-            return "Hello World from UserBLL";
+            return "Id";
         }
     }
 }
